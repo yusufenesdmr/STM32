@@ -1,0 +1,10 @@
+13:39:50 **** Incremental Build of configuration Debug for project PWM ****
+make -j16 all 
+arm-none-eabi-size  PWM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7936	     12	   1644	   9592	   2578	PWM.elf
+Finished building: default.size.stdout
+ 
+
+13:39:50 Build Finished. 0 errors, 0 warnings. (took 193ms)
+

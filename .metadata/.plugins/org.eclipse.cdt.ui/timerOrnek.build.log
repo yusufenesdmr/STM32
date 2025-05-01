@@ -1,0 +1,10 @@
+21:18:19 **** Incremental Build of configuration Debug for project timerOrnek ****
+make -j16 all 
+arm-none-eabi-size  timerOrnek.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6884	     12	   1644	   8540	   215c	timerOrnek.elf
+Finished building: default.size.stdout
+ 
+
+21:18:19 Build Finished. 0 errors, 0 warnings. (took 191ms)
+

@@ -1,0 +1,10 @@
+16:14:39 **** Incremental Build of configuration Debug for project olacak ****
+make -j16 all 
+arm-none-eabi-size  olacak.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7636	     12	   1652	   9300	   2454	olacak.elf
+Finished building: default.size.stdout
+ 
+
+16:14:39 Build Finished. 0 errors, 0 warnings. (took 198ms)
+

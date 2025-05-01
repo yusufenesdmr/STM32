@@ -1,0 +1,10 @@
+21:45:20 **** Incremental Build of configuration Debug for project bokkod ****
+make -j16 all 
+arm-none-eabi-size  bokkod.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4476	     12	   1572	   6060	   17ac	bokkod.elf
+Finished building: default.size.stdout
+ 
+
+21:45:20 Build Finished. 0 errors, 0 warnings. (took 196ms)
+

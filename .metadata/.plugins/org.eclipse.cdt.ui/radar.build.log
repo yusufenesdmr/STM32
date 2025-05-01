@@ -1,0 +1,45 @@
+14:05:21 **** Incremental Build of configuration Debug for project radar ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:11: warning: implicit declaration of function 'measureDistance' [-Wimplicit-function-declaration]
+  112 |           measureDistance();
+      |           ^~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:291:6: warning: conflicting types for 'measureDistance'; have 'void(void)'
+  291 | void measureDistance(void)
+      |      ^~~~~~~~~~~~~~~
+../Core/Src/main.c:112:11: note: previous implicit declaration of 'measureDistance' with type 'void(void)'
+  112 |           measureDistance();
+      |           ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'measureDistance':
+../Core/Src/main.c:313:5: error: 'echoTime' undeclared (first use in this function)
+  313 |     echoTime = endTime - startTime;
+      |     ^~~~~~~~
+../Core/Src/main.c:313:5: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:322:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  322 |     printf("Distance: %.2f cm\n", distance);  // float türünü doğru yazdırmak için %.2f
+      |     ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:322:5: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  322 |     printf("Distance: %.2f cm\n", distance);  // float türünü doğru yazdırmak için %.2f
+      |     ^~~~~~
+../Core/Src/main.c:322:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:340:1: error: expected declaration or statement at end of input
+  340 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:331:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  331 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+14:05:21 Build Failed. 4 errors, 5 warnings. (took 348ms)
+
